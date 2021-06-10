@@ -137,6 +137,7 @@ hr {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  padding-top: 164px;
 
   background: url(../images/intro-bg.jpg) center no-repeat;
   background-size: cover;
@@ -889,4 +890,41 @@ hr {
 .blog__stat-item i {
   padding-right: 7px;
   color: #95e1d3;
+}
+
+/* Map */
+.section--map {
+  padding: 57px 0;
+  background: url("../images/map-bg.png") center no-repeat;
+}
+
+.map {
+  text-align: center;
+  color: #f38181;
+}
+
+.map__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;  
+}
+
+.map__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+
+
+  background-color: #f38181;
+}
+
+.map__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.map__link:hover {
+  text-decoration: underline;
 }
