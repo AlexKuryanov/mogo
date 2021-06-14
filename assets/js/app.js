@@ -31,12 +31,17 @@ $(function(){
         blockId = $this.data("scroll"),
         blockOffset = $(blockId).offset().top;
 
+        console.log(blockOffset);
+
         $("#nav a").removeClass("active");
         $this.addClass("active");
         
         $("html, body").animate({
-          scrollTop: blockOffset
+          scrollTop: blockOffset - 30
         }, 500);
+
+        $("#nav").removeClass("active");
+        $("#nav-toggle").removeClass("active");
   });
 
   /* Menu nav toggle */
@@ -47,5 +52,25 @@ $(function(){
     $(this).toggleClass("active");
     $("#nav").toggleClass("active");
   })
+
+  /* Accordion collapse */
+
+  $("[data-collapse]").on("click", function(event) {
+    event.preventDefault();
+
+    let $this = $(this);
+        blockId = $this.data("collapse");
+
+        $this.toggleClass("active");
+  });
+
+  /* Slider */ 
+
+  $("[data-slider]").slick({
+    infinite: true,
+    fade: false,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 
 });
